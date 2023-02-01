@@ -1,5 +1,5 @@
 import '@components/sidebar/Sidebar';
-import { sideBarItems, fontAwesomeIcons } from '@components/sidebar/SidebarData';
+import { sideBarItems } from '@components/sidebar/SidebarData';
 import { useEffect, useState } from 'react';
 
 const Sidebar = () => {

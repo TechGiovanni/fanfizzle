@@ -10,11 +10,11 @@ const aliasMap = {
   '@routes': 'src/routes',
   '@services': 'src/services',
   '@utils': 'src/utils',
-  '@root': 'src'
+  '@root': 'src',
 };
 
 const options = {
-  alias: aliasMap
+  alias: aliasMap,
 };
 
 module.exports = aliasWebpack(options);
