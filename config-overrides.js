@@ -1,6 +1,6 @@
-const { aliasWebpack, aliasJest } = require('react-app-rewire-alias');
+const { aliasWebpack, aliasJest } = require('react-app-alias');
 
-const aliasMap = {
+const options = {
   '@assets': 'src/assets',
   '@components': 'src/components',
   '@hooks': 'src/hooks',
@@ -13,9 +13,9 @@ const aliasMap = {
   '@root': 'src',
 };
 
-const options = {
-  alias: aliasMap,
-};
+// const options = {
+//   alias: aliasMap,
+// };
 
 module.exports = aliasWebpack(options);
 module.exports.jest = aliasJest(options);
