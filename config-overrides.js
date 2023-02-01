@@ -1,4 +1,4 @@
-const { aliasWebpack, aliasJest } = require('react-app-alias');
+const { aliasWebpack, aliasJest } = require('react-app-rewire-alias');
 
 const aliasMap = {
   '@assets': 'src/assets',
