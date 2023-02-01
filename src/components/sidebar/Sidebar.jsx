@@ -14,9 +14,9 @@ const Sidebar = () => {
       <div className="">
         <ul>
           {sideBar.map((item) => (
-            <>
+            <div key={item.index}>
               <p>{item.name}</p>
-            </>
+            </div>
           ))}
         </ul>
       </div>

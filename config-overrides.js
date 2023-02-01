@@ -1,6 +1,6 @@
 const { aliasWebpack, aliasJest } = require('react-app-alias');
 
-const options = {
+const aliasMap = {
   '@assets': 'src/assets',
   '@components': 'src/components',
   '@hooks': 'src/hooks',
@@ -13,9 +13,9 @@ const options = {
   '@root': 'src',
 };
 
-// const options = {
-//   alias: aliasMap,
-// };
+const options = {
+  alias: aliasMap,
+};
 
 module.exports = aliasWebpack(options);
 module.exports.jest = aliasJest(options);

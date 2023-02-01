@@ -9,7 +9,7 @@ const Error = () => {
   return (
     <div className="error-container">
       <div className="oops">Oops!</div>
-      <p className="not-found">Error 404: Page Not Found</p>
+      <p className="not-found">Error 404: Page Is Not Found</p>
       <Button label="Back Home" className="back-button button" handleClick={() => navigate(-1)} />
     </div>
   );
