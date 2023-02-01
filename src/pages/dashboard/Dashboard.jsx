@@ -13,6 +13,7 @@ const SideBar = () => {
         <div className="dashboard_sidebar">
           <div>
             <Sidebar />
+            <p></p>
           </div>
         </div>
         <div className="dashboard_content">
