@@ -5,9 +5,11 @@ import Login from '@pages/auth/login/Login';
 import Register from '@pages/auth/register/Register';
 import ForgotPassword from '@pages/auth/forgotPassword/ForgotPassword';
 import Profile from '@pages/profile/Profile';
-import Feed from '@pages/dashboard/features/feed/Feed';
-import SideBar from '@pages/dashboard/Dashboard';
+import Feed from '@pages/feed/Feed';
+import Dashboard from '@pages/dashboard/Dashboard';
 import Error from '@pages/error/Error';
+import Followers from '@pages/followers/Followers';
+import Following from '@pages/following/Following';
 
 export const AppRouter = () => {
   const element = useRoutes([
@@ -28,26 +30,26 @@ export const AppRouter = () => {
           element: <ForgotPassword />,
         },
         {
-          path: 'profile/:username',
+          path: 'profile/in/:username',
           element: <Profile />,
         },
       ],
     },
     {
       path: 'app/',
-      element: <SideBar />,
+      element: <Dashboard />,
       children: [
         {
-          path: 'foryou/feed',
+          path: 'feed',
           element: <Feed />,
         },
         {
-          path: 'social/followers',
-          element: <Feed />,
+          path: 'followers',
+          element: <Followers />,
         },
         {
-          path: 'social/following',
-          element: <Feed />,
+          path: 'following',
+          element: <Following />,
         },
       ],
     },
