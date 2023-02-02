@@ -3,7 +3,64 @@ import React from 'react';
 const People = () => {
   return (
     <div>
-      <h1>People</h1>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
+      <p>People</p>
     </div>
   );
 };

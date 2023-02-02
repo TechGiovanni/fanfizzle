@@ -1,4 +1,4 @@
-import '@components/sidebar/Sidebar.scss';
+import '@components/homeSidebar/HomeSidebar.scss';
 import { sideBarItems, fontAwesomeIcons } from '@components/homeSidebar/HomeSidebarData';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -27,7 +27,7 @@ const HomeSidebar = () => {
             <li key={data.index}>
               <div
                 onClick={() => {
-                  navigate(`${data.name}`);
+                  navigate(`home/${data.name.toLowerCase()}`);
                 }}
                 className={`sidebar-link ${checkUrl(data.name) ? 'active' : ''}`}
               >
@@ -38,6 +38,10 @@ const HomeSidebar = () => {
               </div>
             </li>
           ))}
+
+          <li className="sidebar-button-holder">
+            <button className="sidebar-home-button">Login</button>
+          </li>
         </ul>
       </div>
     </div>

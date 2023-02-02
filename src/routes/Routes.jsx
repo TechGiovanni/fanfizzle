@@ -10,7 +10,6 @@ import Dashboard from '@pages/dashboard/Dashboard';
 import Error from '@pages/error/Error';
 import Followers from '@pages/followers/Followers';
 import Following from '@pages/following/Following';
-import Home from '@components/home/Home';
 import People from '@pages/people/People';
 
 export const AppRouter = () => {
@@ -20,15 +19,11 @@ export const AppRouter = () => {
       element: <Navbar />, // should be protected - redirect to home
       children: [
         {
-          path: 'home',
-          element: <Home />,
-        },
-        {
-          path: 'feed',
+          path: 'home/feed',
           element: <Feed />,
         },
         {
-          path: 'people',
+          path: 'home/people',
           element: <People />,
         },
         {
@@ -46,7 +41,7 @@ export const AppRouter = () => {
       ],
     },
     {
-      path: 'app/',
+      path: '/app/',
       element: <Dashboard />,
       children: [
         {

@@ -37,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className="navbar-section-base">
       {' '}
       {authModal && (
         <Backdrop>
@@ -56,7 +56,6 @@ const Navbar = () => {
               <div className="app-name">FanFizzle</div>
             </Link>
           </div>
-
           <div className="nav-buttons">
             <Button disabled={false} buttonColor="primary" handleClick={handleOpenAuthModal}>
               Login
@@ -70,11 +69,13 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div className="home-sidebar-content">
-        <div className="side-bar-holder">
-          <HomeSidebar />
+      <div style={{ display: 'flex' }}>
+        <div className="home-sidebar-content">
+          <div className="side-bar-holder">
+            <HomeSidebar />
+          </div>
         </div>
-        <div>
+        <div className="outlet">
           <Outlet />
         </div>
       </div>
