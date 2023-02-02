@@ -11,14 +11,13 @@
   box-shadow: 1px 5px 5px var(--gray-16);
   height: 100vh;
 
-
   .side-menu {
     padding: 2rem 1.5rem;
 
     .list-unstyled {
       margin: 0;
       padding: 0;
-      width: 200px;
+      width: 100%;
 
       li {
         display: flex;
@@ -31,15 +30,14 @@
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          width: 90%;
+          width: 85%;
           text-decoration: none;
           border: 1px solid transparent;
-          border-radius: 25px;
           padding: 0.6rem 1.5rem;
           cursor: pointer;
 
           &:hover {
-            background-color: rgb(239, 239, 239);
+            @include sidebar-styles;
 
             .menu-icon {
               .icon {

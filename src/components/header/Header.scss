@@ -8,9 +8,9 @@
 
 .header-nav-wrapper {
   width: 100vw;
+  position: sticky;
   top: 0;
   background-color: var(--white-1);
-  position: sticky;
   z-index: 20;
   height: 75px;
   box-shadow: 0 0 20px 0 rgb(44 101 144 / 10%);

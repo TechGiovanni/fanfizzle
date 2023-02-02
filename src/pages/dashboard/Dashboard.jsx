@@ -11,11 +11,9 @@ const SideBar = () => {
       <Header />
       <div className="dashboard">
         <div className="dashboard_sidebar">
-          <div>
-            <Sidebar />
-            <p></p>
-          </div>
+          <Sidebar />
         </div>
+
         <div className="dashboard_content">
           <Outlet />
         </div>

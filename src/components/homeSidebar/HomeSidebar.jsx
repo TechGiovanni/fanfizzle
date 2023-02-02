@@ -1,11 +1,12 @@
 import '@components/sidebar/Sidebar.scss';
-import { sideBarItems, fontAwesomeIcons } from '@components/sidebar/SidebarData';
+import { sideBarItems, fontAwesomeIcons } from '@components/homeSidebar/HomeSidebarData';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-const Sidebar = () => {
-  const [sideBar, setSidebar] = useState([]);
+const HomeSidebar = () => {
+  const [homeSidebar, setHomeSidebar] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const checkUrl = (name) => {
     // takes thee name of the side bar item
@@ -14,20 +15,22 @@ const Sidebar = () => {
     return location.pathname.includes(name.toLowerCase());
   };
 
-  // const navigateToPage = () => {};
-  // onClick={() => navigateToPage(data.name, data.url)}
-
   useEffect(() => {
-    setSidebar(sideBarItems);
+    setHomeSidebar(sideBarItems);
   }, []);
 
   return (
     <div className="app-side-menu">
       <div className="side-menu">
         <ul className="list-unstyled">
-          {sideBar.map((data) => (
+          {homeSidebar.map((data) => (
             <li key={data.index}>
-              <div className={`sidebar-link ${checkUrl(data.name) ? 'active' : ''}`}>
+              <div
+                onClick={() => {
+                  navigate(`${data.name}`);
+                }}
+                className={`sidebar-link ${checkUrl(data.name) ? 'active' : ''}`}
+              >
                 <div className="menu-icon">{fontAwesomeIcons[data.iconName]}</div>
                 <div className="menu-link">
                   <span>{`${data.name}`}</span>
@@ -41,4 +44,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default HomeSidebar;

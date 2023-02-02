@@ -15,6 +15,7 @@ import Auth from '@components/auth/Auth';
 
 // reducer
 import { closeAuthModal } from '@redux/reducers/loginModal/loginModal.reducer';
+import HomeSidebar from '@components/homeSidebar/HomeSidebar';
 
 const Backdrop = styled.div`
   position: fixed;
@@ -69,7 +70,14 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <Outlet />
+      <div className="home-sidebar-content">
+        <div className="side-bar-holder">
+          <HomeSidebar />
+        </div>
+        <div>
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 };
