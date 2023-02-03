@@ -11,21 +11,18 @@ import Error from '@pages/error/Error';
 import Followers from '@pages/followers/Followers';
 import Following from '@pages/following/Following';
 import People from '@pages/people/People';
+import Home from '@pages/home/Home';
 
 export const AppRouter = () => {
   const element = useRoutes([
     {
       path: '/',
+      element: <Home />,
+    },
+    {
+      path: '/in/',
       element: <Navbar />, // should be protected - redirect to home
       children: [
-        {
-          path: 'home/feed',
-          element: <Feed />,
-        },
-        {
-          path: 'home/people',
-          element: <People />,
-        },
         {
           path: 'auth/login',
           element: <Login />,
@@ -51,6 +48,10 @@ export const AppRouter = () => {
         {
           path: 'feed',
           element: <Feed />,
+        },
+        {
+          path: 'people',
+          element: <People />,
         },
         {
           path: 'followers',

@@ -7,15 +7,15 @@ import styled from 'styled-components';
 import './Navbar.scss';
 
 // component
-import logo from '@assets/images/logo3.svg';
+import logo from '@assets/images/logo6.svg';
 import Button from '@components/button/Button';
-import { FaEllipsisV } from 'react-icons/fa';
+import { FaListUl } from 'react-icons/fa';
 import DarkMode from '@components/navbar/darkmode/DarkMode';
 import Auth from '@components/auth/Auth';
 
 // reducer
 import { closeAuthModal } from '@redux/reducers/loginModal/loginModal.reducer';
-import HomeSidebar from '@components/homeSidebar/HomeSidebar';
+// import HomeSidebar from '@components/homeSidebar/HomeSidebar';
 
 const Backdrop = styled.div`
   position: fixed;
@@ -61,7 +61,7 @@ const Navbar = () => {
               Login
             </Button>
             <div className="menu-items">
-              <FaEllipsisV className="navbar-three-dots"></FaEllipsisV>
+              <FaListUl className="navbar-three-dots"></FaListUl>
               <div className="dropdown-menu-nav">
                 <DarkMode />
               </div>
@@ -70,11 +70,11 @@ const Navbar = () => {
         </div>
       </nav>
       <div style={{ display: 'flex' }}>
-        <div className="home-sidebar-content">
+        {/* <div className="home-sidebar-content">
           <div className="side-bar-holder">
             <HomeSidebar />
           </div>
-        </div>
+        </div> */}
         <div className="outlet">
           <Outlet />
         </div>

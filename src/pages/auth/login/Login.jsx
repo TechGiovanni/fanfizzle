@@ -36,10 +36,10 @@ const Login = () => {
   };
 
   const handleChangeToRegister = () => {
-    navigate('/auth/register');
+    navigate('/in/auth/register');
   };
   const handleForgotPassword = () => {
-    navigate('/auth/password-reset');
+    navigate('/in/auth/password-reset');
   };
 
   const handleLoginInputChange = (event) => {

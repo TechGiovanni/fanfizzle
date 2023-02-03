@@ -27,7 +27,7 @@ const LoginDefault = () => {
     if (itemEvent === 'Use Email / Username') {
       dispatch(changeLoginOrRegister({ loginTab: true }));
       dispatch(closeAuthModal({ authModalState: false }));
-      return navigate('/auth/login');
+      return navigate('/in/auth/login');
     }
   };
 

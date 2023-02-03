@@ -1,11 +1,14 @@
 import '@components/homeSidebar/HomeSidebar.scss';
 import { sideBarItems, fontAwesomeIcons } from '@components/homeSidebar/HomeSidebarData';
+import { closeAuthModal } from '@redux/reducers/loginModal/loginModal.reducer';
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const HomeSidebar = () => {
   const [homeSidebar, setHomeSidebar] = useState([]);
   const location = useLocation();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const checkUrl = (name) => {
@@ -18,6 +21,10 @@ const HomeSidebar = () => {
   useEffect(() => {
     setHomeSidebar(sideBarItems);
   }, []);
+
+  const handleOpenAuthModal = () => {
+    dispatch(closeAuthModal({ authModalState: true }));
+  };
 
   return (
     <div className="app-side-menu">
@@ -40,7 +47,9 @@ const HomeSidebar = () => {
           ))}
 
           <li className="sidebar-button-holder">
-            <button className="sidebar-home-button">Login</button>
+            <button onClick={handleOpenAuthModal} className="sidebar-home-button">
+              Login
+            </button>
           </li>
         </ul>
       </div>

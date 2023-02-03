@@ -1,4 +1,4 @@
-import '@components/sidebar/Sidebar.scss';
+// import '@components/sidebar/Sidebar.scss';
 import { sideBarItems, fontAwesomeIcons } from '@components/sidebar/SidebarData';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';

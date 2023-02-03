@@ -38,7 +38,7 @@ const Register = () => {
   };
 
   const handleChangeToLogin = () => {
-    navigate('/auth/login');
+    navigate('/in/auth/login');
   };
 
   const handleRegisterInputChange = (event) => {
