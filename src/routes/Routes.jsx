@@ -10,12 +10,18 @@ import Dashboard from '@pages/dashboard/Dashboard';
 import Error from '@pages/error/Error';
 import Followers from '@pages/followers/Followers';
 import Following from '@pages/following/Following';
+import People from '@pages/people/People';
+import Home from '@pages/home/Home';
 
 export const AppRouter = () => {
   const element = useRoutes([
     {
       path: '/',
-      element: <Navbar />,
+      element: <Home />,
+    },
+    {
+      path: '/in/',
+      element: <Navbar />, // should be protected - redirect to home
       children: [
         {
           path: 'auth/login',
@@ -29,19 +35,23 @@ export const AppRouter = () => {
           path: 'auth/password-reset',
           element: <ForgotPassword />,
         },
+      ],
+    },
+    {
+      path: '/app/',
+      element: <Dashboard />,
+      children: [
         {
           path: 'profile/in/:username',
           element: <Profile />,
         },
-      ],
-    },
-    {
-      path: 'app/',
-      element: <Dashboard />,
-      children: [
         {
           path: 'feed',
           element: <Feed />,
+        },
+        {
+          path: 'people',
+          element: <People />,
         },
         {
           path: 'followers',

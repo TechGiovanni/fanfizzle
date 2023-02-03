@@ -9,11 +9,13 @@ import authModalReducer from '@redux/reducers/loginModal/loginModal.reducer';
 
 // user
 import userReducer from '@redux/reducers/user/user.reducer';
+import suggestionsReducer from '@redux/reducers/suggestions/suggestions.reducer';
 
 export const store = configureStore({
   reducer: {
     loginOrRegisterTab: loginOrRegisterReducer,
     authModalName: authModalReducer,
     user: userReducer,
+    suggestions: suggestionsReducer,
   },
 });

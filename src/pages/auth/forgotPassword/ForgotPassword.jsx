@@ -31,11 +31,11 @@ const ForgotPassword = () => {
   const dispatch = useDispatch();
 
   const handleGoBackToLogin = () => {
-    navigate('/auth/login');
+    navigate('/in/auth/login');
   };
 
   const handleChangeToRegister = () => {
-    navigate('/auth/register');
+    navigate('/in/auth/register');
   };
 
   const handleInputChange = (event) => {

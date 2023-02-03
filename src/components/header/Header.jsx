@@ -1,4 +1,4 @@
-import logo from '@assets/images/logo3.svg';
+import logo from '@assets/images/logo6.svg';
 import { FaCaretDown, FaRegBell, FaRegEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 

@@ -9,17 +9,25 @@ const SideBar = () => {
   return (
     <>
       <Header />
-      <div className="dashboard">
-        <div className="dashboard_sidebar">
-          <div>
+      <div style={{ display: 'flex' }}>
+        <div className="home-sidebar-content">
+          <div className="side-bar-holder">
             <Sidebar />
-            <p></p>
           </div>
         </div>
-        <div className="dashboard_content">
+        <div className="outlet">
           <Outlet />
         </div>
       </div>
+      {/* <div className="dashboard">
+        <div className="dashboard_sidebar">
+          <Sidebar />
+        </div>
+
+        <div className="dashboard_content">
+          <Outlet />
+        </div>
+      </div> */}
     </>
   );
 };
